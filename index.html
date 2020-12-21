@@ -1,37 +1,79 @@
-
-
 <!DOCTYPE html>
+
 <html>
+
 <title>/</title>
 
- <head>
+        <head>
 
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
 <!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 
 <!-- Latest compiled JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
  
 <!-- Script for the clock -->
-<script src="Source/Clock.js"></script>
-
-
-
- 
+            <script src="Source/Clock.js"></script>
 
 <link rel="stylesheet" type="text/css" href="Style.css"/>
 
 
-</head>
+<!--Randomly Selecting Background Image -->
+
+        <style>
+
+.bgSetter {
+  background-image: url("Images/Background.jpg");
+  background-size: cover;
+  height: 100%;
+  color: $white;
+  text-align: center;
+}
+
+
+        </style>
+
+            <script>
+
+function randomImage(){
+  var images = [
+   'Images/Background.jpg',
+   'Images/Background2.jpg',
+   'Images/Background3.jpg',
+   'Images/Background4.jpg',
+   'Images/Background5.jpg',
+   'Images/Background6.jpg',
+   'Images/Background7.jpg',
+   'Images/Background8.jpg',
+   'Images/Background9.jpg'];
+  var size = images.length;
+  var x = Math.floor(size * Math.random());
+  console.log(x);
+  var element = document.getElementsByClassName('bgSetter');
+  console.log(element);
+  element[0].style["background-image"] = "url("+ images[x] + ")";
+}
+
+document.addEventListener("DOMContentLoaded", randomImage);
+
+        </script>
+    
+
+            </head>
 
 
  
-<body onload="startTime()">
+    <body onload="startTime()" class=bgSetter>
 
-<header>
+<div style="height: 500%">
+    <div id="imageDiv" class="imageContainer"></div>
+</div>
+
+
+            <header>
 
 <div class="align-bottom">
       <div class="form-group">
@@ -41,19 +83,7 @@
       </div>
 
 
-</header>
-
-
-  <footer class="container-fluid bg-2 text-center">
-
-  <p><h1 id="clock"></h1></p>
-
-
-      
-  </footer>
-
-
-    
+            </header>
 
    <div class="container-fluid">
    <div class="row">
@@ -106,12 +136,13 @@
   </div>
 </div>
 
-
-
-    
     </div>
 
+  <footer class="container-fluid bg-2 text-center">
 
+      <p><h1 id="clock"></h1></p>
+
+  </footer>
 
 </body>
 
