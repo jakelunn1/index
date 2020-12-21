@@ -27,15 +27,6 @@ div.container-fluid
 	padding: 40px;
 }
 
-header
-{
-padding-top: 15px;
-padding-left: 15px;
-padding-right: 15px;
-
-
-}
-
 footer
 {
    position: fixed;
@@ -82,8 +73,8 @@ form > .form-control
 
 
 #clock {
-	text-align: center;
-	font-size: 96px;
+	text-align: left;
+	font-size: 56;
 	margin: 0;
 	padding-top: 144;
   font-family: 'Montecarlo';
