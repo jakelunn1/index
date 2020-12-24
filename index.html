@@ -5,9 +5,9 @@
 <title>/</title>
 
         <head>
-
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 
 <!-- jQuery library -->
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -17,6 +17,9 @@
  
 <!-- Script for the clock -->
             <script src="Source/Clock.js"></script>
+
+<!-- Sets Backgrund Randomly -->
+            <script src="Source/bgSetter.js"></script>
 
 <link rel="stylesheet" type="text/css" href="Style.css"/>
 
@@ -38,28 +41,7 @@
 
             <script>
 
-function randomImage(){
-  var images = [
-   'Images/Background.jpg',
-   'Images/Background2.jpg',
-   'Images/Background3.jpg',
-   'Images/Background4.jpg',
-   'Images/Background5.jpg',
-   'Images/Background6.jpg',
-   'Images/Background7.jpg',
-   'Images/Background8.jpg',
-   'Images/Background9.jpg',
-   'Images/Background10.jpg',
-   'Images/Background11.jpg'];
-  var size = images.length;
-  var x = Math.floor(size * Math.random());
-  console.log(x);
-  var element = document.getElementsByClassName('bgSetter');
-  console.log(element);
-  element[0].style["background-image"] = "url("+ images[x] + ")";
-}
 
-document.addEventListener("DOMContentLoaded", randomImage);
 
         </script>
     
@@ -79,7 +61,7 @@ document.addEventListener("DOMContentLoaded", randomImage);
 
 <div class="align-bottom">
       <div class="form-group">
-        <form method="get" action="https://duckduckgo.com/?q=search">
+        <form method="get" action="https://www.google.com/search?">
           <input type="text" class="form-control" id="search" name="q" size="50" placeholder="where to?" autocomplete="on" autofocus>
         </form>
       </div>
@@ -138,7 +120,25 @@ document.addEventListener("DOMContentLoaded", randomImage);
   </div>
 </div>
 
-    </div>
+
+
+
+<div> 
+
+<div id="myDIV" class="header">
+  <h2 style="margin:5px">To Do</h2>
+  <input type="text" id="myInput" placeholder="Title...">
+  <span onclick="newElement()" class="addBtn">Add</span>
+</div>
+
+<ul id="myUL">
+
+</ul>
+
+
+
+</div>
+
 
   <footer class="container-fluid bg-2 text-center">
 
@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", randomImage);
 
 </body>
 
+<script src="Source/todo.js"></script>
 
 
 
